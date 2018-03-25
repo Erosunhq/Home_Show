@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Chinese_style"
+        android:title="@string/Chinese_style" />
+
+    <item
+        android:id="@+id/European_style"
+        android:title="@string/European_style"/>
+
+    <item
+        android:id="@+id/American_style"
+        android:title="@string/American_style"/>
+
+    <item
+        android:id="@+id/Modern_style"
+        android:title="@string/Modern_style"/>
+
+    <item
+        android:id="@+id/Industry_style"
+        android:title="@string/Industry_style"/>
+</menu>

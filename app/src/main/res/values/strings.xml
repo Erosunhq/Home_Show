@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">家装展示</string>
+    <string name="style">风格</string>
+    <string name="space">空间</string>
+    <string name="ceramic">瓷砖</string>
+    <string name="format">规格</string>
+
+    <string name="Chinese_style">中式</string>
+    <string name="European_style">欧式</string>
+    <string name="American_style">美式</string>
+    <string name="Modern_style">现代</string>
+    <string name="Industry_style">工业风</string>
+
+</resources>

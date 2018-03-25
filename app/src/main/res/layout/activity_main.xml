@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+    <ImageView
+        android:id="@+id/logo_home"
+        android:layout_width = "0dp"
+        android:layout_height = "0dp"
+        app:layout_heightPercent = "52.63%"
+        app:layout_widthPercent="22.96%"
+        app:layout_marginLeftPercent = "17.78%"
+        app:layout_marginTopPercent="19.74%"
+        />
+
+
+    <Button
+        android:id="@+id/home_decoration_display"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "7.63%"
+        app:layout_widthPercent="23.08%"
+        app:layout_marginLeftPercent = "58.52%"
+        app:layout_marginTopPercent="34.21%"
+        android:background="@mipmap/home_button3"/>
+    <Button
+        android:id="@+id/engineering_case"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "7.63%"
+        app:layout_widthPercent="23.08%"
+        app:layout_marginLeftPercent = "58.52%"
+        app:layout_marginTopPercent="47.37%"
+        android:background="@mipmap/home_button2"/>
+    <Button
+        android:id="@+id/corporate_honor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "7.63%"
+        app:layout_widthPercent="23.08%"
+        app:layout_marginLeftPercent = "58.52%"
+        app:layout_marginTopPercent="60.13%"
+        android:background="@mipmap/home_button1"/>
+
+    <Button
+        android:id="@+id/close_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "4.6%"
+        app:layout_widthPercent="14.81%"
+        app:layout_marginLeftPercent = "3%"
+        app:layout_marginTopPercent="94.84%"
+        android:background="@mipmap/home_close_btn"/>
+
+
+
+</android.support.percent.PercentFrameLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <ImageView
+    android:id="@+id/logo_home_display"
+    android:layout_width = "0dp"
+    android:layout_height = "0dp"
+    app:layout_heightPercent = "51.32%"
+    app:layout_widthPercent="23.93%"
+    app:layout_marginLeftPercent = "38.37%"
+    app:layout_marginTopPercent="7.89%"/>
+
+    <ImageView
+        android:id="@+id/left_home_display"
+        android:layout_width = "0dp"
+        android:layout_height = "0dp"
+        app:layout_heightPercent = "2.63%"
+        app:layout_widthPercent="38.52%"
+        app:layout_marginLeftPercent = "0%"
+        app:layout_marginTopPercent="36.84%"
+        android:src="@mipmap/left"/>
+
+    <ImageView
+        android:id="@+id/right_home_display"
+        android:layout_width = "0dp"
+        android:layout_height = "0dp"
+        app:layout_heightPercent = "2.63%"
+        app:layout_widthPercent="38.52%"
+        app:layout_marginLeftPercent = "62%"
+        app:layout_marginTopPercent="36.84%"
+        android:src="@mipmap/right"/>
+
+
+    <Button
+        android:id="@+id/style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "3.29%"
+        app:layout_widthPercent="7.04%"
+        app:layout_marginLeftPercent = "9.63%"
+        app:layout_marginTopPercent="40.79%"
+        android:background="#00000000"
+        android:drawableLeft="@mipmap/style"
+        android:text="@string/style"/>
+
+    <Button
+        android:id="@+id/bedroom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "3.29%"
+        app:layout_widthPercent="7.04%"
+        app:layout_marginLeftPercent = "22.96%"
+        app:layout_marginTopPercent="40.79%"
+        android:background="#00000000"
+        android:drawableLeft="@mipmap/bedroom"
+        android:text="@string/space"/>
+
+    <Button
+        android:id="@+id/type"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "3.29%"
+        app:layout_widthPercent="7.04%"
+        app:layout_marginLeftPercent = "65.19%"
+        app:layout_marginTopPercent="40.79%"
+        android:background="#00000000"
+        android:drawableLeft="@mipmap/type"
+        android:text="@string/ceramic"/>
+
+    <Button
+        android:id="@+id/size"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "3.29%"
+        app:layout_widthPercent="11.11%"
+        app:layout_marginLeftPercent = "80.22%"
+        app:layout_marginTopPercent="40.79%"
+        android:background="#00000000"
+        android:drawableLeft="@mipmap/size"
+        android:text="@string/format"/>
+
+    <Button
+        android:id="@+id/home_display_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "6%"
+        app:layout_widthPercent="14.33%"
+        app:layout_marginLeftPercent = "3%"
+        app:layout_marginTopPercent="94.84%"
+        android:background="@mipmap/home_display_back"/>
+
+    <!-- 顶部的图片展示 -->
+   <!-- <android.support.v4.view.ViewPager
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "25%"
+        app:layout_widthPercent="63%"
+        app:layout_marginLeftPercent = "18.52%"
+        app:layout_marginTopPercent="7.89%"/>-->
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "25%"
+        app:layout_widthPercent="63%"
+        app:layout_marginLeftPercent = "18.52%"
+        app:layout_marginTopPercent="7.89%">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+                <GridView
+                    android:id="@+id/top_gridView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchMode="spacingWidthUniform"
+                    android:horizontalSpacing="10dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</android.support.percent.PercentFrameLayout>
