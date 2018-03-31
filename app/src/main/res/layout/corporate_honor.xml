@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/logo_home"
+        android:layout_width = "0dp"
+        android:layout_height = "0dp"
+        app:layout_heightPercent = "52.63%"
+        app:layout_widthPercent="24.44%"
+        app:layout_marginLeftPercent = "2.96%"
+        app:layout_marginTopPercent="19.74%"
+        />
+
+    <Button
+        android:id="@+id/corporate_honor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "30.26%"
+        app:layout_widthPercent="5.19%"
+        app:layout_marginLeftPercent = "92.59%"
+        app:layout_marginTopPercent="15.79%"
+        android:background="@mipmap/corporate_honor"/>
+
+    <Button
+        android:id="@+id/technical_parameter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "30.26%"
+        app:layout_widthPercent="5.19%"
+        app:layout_marginLeftPercent = "92.59%"
+        app:layout_marginTopPercent="50%"
+        android:background="@mipmap/technical_parameter"/>
+
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "67.76%"
+        app:layout_widthPercent="60%"
+        app:layout_marginLeftPercent = "30.37%"
+        app:layout_marginTopPercent="14.47%"
+        android:padding="10dp"
+        android:numColumns="4"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:background="@mipmap/border"/>
+
+    <!-- 技术参数的表格 -->
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "67.76%"
+        app:layout_widthPercent="60%"
+        app:layout_marginLeftPercent = "30.37%"
+        app:layout_marginTopPercent="14.47%"
+        android:visibility="invisible"
+        android:background="@mipmap/border">
+
+
+
+    </TableLayout>
+
+
+
+    <Button
+        android:id="@+id/corporate_honor_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent = "6%"
+        app:layout_widthPercent="14.33%"
+        app:layout_marginLeftPercent = "3%"
+        app:layout_marginTopPercent="90.84%"
+        android:background="@mipmap/home_display_back"/>
+
+</android.support.percent.PercentFrameLayout>

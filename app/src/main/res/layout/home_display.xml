@@ -39,20 +39,20 @@
         android:id="@+id/style"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_heightPercent = "3.29%"
-        app:layout_widthPercent="7.04%"
-        app:layout_marginLeftPercent = "9.63%"
+        app:layout_heightPercent = "4.5%"
+        app:layout_widthPercent="10.04%"
+        app:layout_marginLeftPercent = "8.63%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
         android:drawableLeft="@mipmap/style"
         android:text="@string/style"/>
 
     <Button
-        android:id="@+id/bedroom"
+        android:id="@+id/space"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_heightPercent = "3.29%"
-        app:layout_widthPercent="7.04%"
+        app:layout_heightPercent = "4.5%"
+        app:layout_widthPercent="10.04%"
         app:layout_marginLeftPercent = "22.96%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
@@ -63,8 +63,8 @@
         android:id="@+id/type"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_heightPercent = "3.29%"
-        app:layout_widthPercent="7.04%"
+        app:layout_heightPercent = "4.5%"
+        app:layout_widthPercent="10.04%"
         app:layout_marginLeftPercent = "65.19%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
@@ -75,8 +75,8 @@
         android:id="@+id/size"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_heightPercent = "3.29%"
-        app:layout_widthPercent="11.11%"
+        app:layout_heightPercent = "4.5%"
+        app:layout_widthPercent="10.04%"
         app:layout_marginLeftPercent = "80.22%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
@@ -90,17 +90,9 @@
         app:layout_heightPercent = "6%"
         app:layout_widthPercent="14.33%"
         app:layout_marginLeftPercent = "3%"
-        app:layout_marginTopPercent="94.84%"
+        app:layout_marginTopPercent="90.84%"
         android:background="@mipmap/home_display_back"/>
 
-    <!-- 顶部的图片展示 -->
-   <!-- <android.support.v4.view.ViewPager
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_heightPercent = "25%"
-        app:layout_widthPercent="63%"
-        app:layout_marginLeftPercent = "18.52%"
-        app:layout_marginTopPercent="7.89%"/>-->
 
     <HorizontalScrollView
         android:id="@+id/scrollView"

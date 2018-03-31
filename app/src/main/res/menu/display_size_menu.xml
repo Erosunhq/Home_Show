@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/a_60A"
+        android:title="@string/a_60A" />
+
+    <item
+        android:id="@+id/a_60G"
+        android:title="@string/a_60G"/>
+
+    <item
+        android:id="@+id/a_80A"
+        android:title="@string/a_80A"/>
+
+    <item
+        android:id="@+id/a_80B"
+        android:title="@string/a_80B"/>
+
+    <item
+        android:id="@+id/a_80AP"
+        android:title="@string/a_80AP"/>
+
+    <item
+        android:id="@+id/a_80BP"
+        android:title="@string/a_80BP"/>
+
+    <item
+        android:id="@+id/a_80CP"
+        android:title="@string/a_80CP"/>
+</menu>

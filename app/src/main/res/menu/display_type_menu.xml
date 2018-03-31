@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/crema_marfil"
+        android:title="@string/crema_marfil" />
+
+    <item
+        android:id="@+id/golden_lvory"
+        android:title="@string/golden_lvory"/>
+
+    <item
+        android:id="@+id/venice_rice_black"
+        android:title="@string/venice_rice_black"/>
+
+    <item
+        android:id="@+id/diamond_ti_meters"
+        android:title="@string/diamond_ti_meters"/>
+
+    <item
+        android:id="@+id/King_Kong_Valentino"
+        android:title="@string/King_Kong_Valentino"/>
+
+    <item
+        android:id="@+id/Cloud_Bella_gold"
+        android:title="@string/Cloud_Bella_gold" />
+
+    <item
+        android:id="@+id/Century_Beige"
+        android:title="@string/Century_Beige"/>
+
+    <item
+        android:id="@+id/Cappuccino"
+        android:title="@string/Cappuccino"/>
+
+    <item
+        android:id="@+id/Ultraman"
+        android:title="@string/Ultraman"/>
+
+    <item
+        android:id="@+id/Modern_wood_grain"
+        android:title="@string/Modern_wood_grain"/>
+
+    <item
+        android:id="@+id/Sophie_Te_Kim"
+        android:title="@string/Sophie_Te_Kim" />
+
+    <item
+        android:id="@+id/Golden_butterfly"
+        android:title="@string/Golden_butterfly"/>
+
+    <item
+        android:id="@+id/Milan_Chanti"
+        android:title="@string/Milan_Chanti"/>
+
+</menu>

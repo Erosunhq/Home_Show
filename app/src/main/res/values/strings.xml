@@ -11,4 +11,37 @@
     <string name="Modern_style">现代</string>
     <string name="Industry_style">工业风</string>
 
+    <string name="public_area">公共场所</string>
+    <string name="bedroom">卧室</string>
+    <string name="toilet">卫生间</string>
+    <string name="kitchen">厨房</string>
+    <string name="restaurant">客餐厅</string>
+    <string name="entrance">玄关</string>
+    <string name="aisle">过道</string>
+
+
+    <string name="a_60A">60A</string>
+    <string name="a_60G">60G</string>
+    <string name="a_80A">80A</string>
+    <string name="a_80B">80B</string>
+    <string name="a_80AP">80AP</string>
+    <string name="a_80BP">80BP</string>
+    <string name="a_80CP">80CP</string>
+
+
+    <string name="crema_marfil">西班牙米黄</string>
+    <string name="golden_lvory">象牙金</string>
+    <string name="venice_rice_black">威尼斯米黑</string>
+    <string name="diamond_ti_meters">金刚米瑅</string>
+    <string name="King_Kong_Valentino">金刚蒂诺</string>
+    <string name="Cloud_Bella_gold">云贝拉金</string>
+    <string name="Century_Beige">世纪米黄</string>
+    <string name="Cappuccino">卡布奇诺</string>
+    <string name="Ultraman">奥特曼</string>
+    <string name="Modern_wood_grain">现代木纹</string>
+    <string name="Sophie_Te_Kim">索菲特金</string>
+    <string name="Golden_butterfly">金蝴蝶</string>
+    <string name="Milan_Chanti">香蒂米兰</string>
+
+
 </resources>

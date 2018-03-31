@@ -1,11 +1,7 @@
 package com.example.sunhq.test;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,12 +10,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.sunhq.test.corporate_honor.Corporate_honor;
+import com.example.sunhq.test.engineering_case.Engineering_case;
+import com.example.sunhq.test.home_display.Home_display;
 import com.squareup.picasso.Picasso;
 
-import java.io.Console;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
                 handler.sendMessage(message);
             }
         }).start();*/
-
         Picasso.with(this)
                 .load(new File(getPath_logo))
                 .placeholder(R.mipmap.ic_launcher)
@@ -54,23 +49,48 @@ public class MainActivity extends AppCompatActivity {
                 .tag("image")
                 .into(imageView);
 
-
         Button close_btn = (Button)findViewById(R.id.close_btn);
-        close_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.exit(0); //完全退出本程序，finish()只是返回上一页
-            }
-        });
+        if (close_btn != null) {
+            close_btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    System.exit(0); //完全退出本程序，finish()只是返回上一页
+                }
+            });
+        }
 
         Button home_decoration_display = (Button) findViewById(R.id.home_decoration_display);
-        home_decoration_display.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Home_display.class);
-                startActivity(intent);
-            }
-        });
+        if (home_decoration_display != null) {
+            home_decoration_display.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this,Home_display.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        Button corporate_honor = (Button) findViewById(R.id.corporate_honor);
+        if (corporate_honor != null) {
+            corporate_honor.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this,Corporate_honor.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        Button engineering_case = (Button) findViewById(R.id.engineering_case);
+        if (engineering_case != null) {
+            engineering_case.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this,Engineering_case.class);
+                    startActivity(intent);
+                }
+            });
+        }
 
     }
 

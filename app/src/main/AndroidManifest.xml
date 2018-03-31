@@ -7,7 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/main_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -18,8 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home_display"></activity>
-
+        <activity android:name=".home_display.Home_display"></activity>
+        <activity android:name=".home_display.ShowPic"></activity>
+        <activity android:name=".corporate_honor.Corporate_honor"></activity>
+        <activity android:name=".engineering_case.Engineering_case"></activity>
+        <activity android:name=".corporate_honor.ShowPic"></activity>
+        <activity android:name=".engineering_case.ShowPic"></activity>
     </application>
 
 </manifest>

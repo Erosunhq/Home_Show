@@ -50,7 +50,7 @@
         app:layout_heightPercent = "4.6%"
         app:layout_widthPercent="14.81%"
         app:layout_marginLeftPercent = "3%"
-        app:layout_marginTopPercent="94.84%"
+        app:layout_marginTopPercent="90.84%"
         android:background="@mipmap/home_close_btn"/>
 
 

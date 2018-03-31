@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/public_area"
+        android:title="@string/public_area" />
+
+    <item
+        android:id="@+id/bedroom"
+        android:title="@string/bedroom"/>
+
+    <item
+        android:id="@+id/toilet"
+        android:title="@string/toilet"/>
+
+    <item
+        android:id="@+id/kitchen"
+        android:title="@string/kitchen"/>
+
+    <item
+        android:id="@+id/restaurant"
+        android:title="@string/restaurant"/>
+
+    <item
+        android:id="@+id/entrance"
+        android:title="@string/entrance"/>
+
+    <item
+        android:id="@+id/aisle"
+        android:title="@string/aisle"/>
+</menu>
