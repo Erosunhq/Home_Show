@@ -130,31 +130,31 @@ public class Home_display extends ActionBarActivity {
                                     ChosedStyle.chosed = getResources().getString(R.string.Chinese_style);
                                     checkedItemIdStyle = R.id.Chinese_style;
                                     style.setText(ChosedStyle.chosed);
-                                    setStyleValue();
+                                    setValue();
                                     break;
                                 case R.id.European_style:
                                     ChosedStyle.chosed = getResources().getString(R.string.European_style);
                                     checkedItemIdStyle = R.id.European_style;
                                     style.setText(ChosedStyle.chosed);
-                                    setStyleValue();
+                                    setValue();
                                     break;
                                 case R.id.American_style:
                                     ChosedStyle.chosed = getResources().getString(R.string.American_style);
                                     checkedItemIdStyle = R.id.American_style;
                                     style.setText(ChosedStyle.chosed);
-                                    setStyleValue();
+                                    setValue();
                                     break;
                                 case R.id.Modern_style:
                                     ChosedStyle.chosed = getResources().getString(R.string.Modern_style);
                                     checkedItemIdStyle = R.id.Modern_style;
                                     style.setText(ChosedStyle.chosed);
-                                    setStyleValue();
+                                    setValue();
                                     break;
                                 case R.id.Industry_style:
                                     ChosedStyle.chosed = getResources().getString(R.string.Industry_style);
                                     checkedItemIdStyle = R.id.Industry_style;
                                     style.setText(ChosedStyle.chosed);
-                                    setStyleValue();
+                                    setValue();
                                     break;
                             }
                             return true;
@@ -184,43 +184,43 @@ public class Home_display extends ActionBarActivity {
                                     ChosedSpace.chosed = getResources().getString(R.string.public_area);
                                     checkedItemIdSpace = R.id.public_area;
                                     space.setText(ChosedSpace.chosed);
-                                    setSpaceValue();
+                                    setValue();
                                     break;
                                 case R.id.bedroom:
                                     ChosedSpace.chosed = getResources().getString(R.string.bedroom);
                                     checkedItemIdSpace = R.id.bedroom;
                                     space.setText(ChosedSpace.chosed);
-                                    setSpaceValue();
+                                    setValue();
                                     break;
                                 case R.id.toilet:
                                     ChosedSpace.chosed = getResources().getString(R.string.toilet);
                                     checkedItemIdSpace = R.id.toilet;
                                     space.setText(ChosedSpace.chosed);
-                                    setSpaceValue();
+                                    setValue();
                                     break;
                                 case R.id.kitchen:
                                     ChosedSpace.chosed = getResources().getString(R.string.kitchen);
                                     checkedItemIdSpace = R.id.kitchen;
                                     space.setText(ChosedSpace.chosed);
-                                    setSpaceValue();
+                                    setValue();
                                     break;
                                 case R.id.restaurant:
                                     ChosedSpace.chosed = getResources().getString(R.string.restaurant);
                                     checkedItemIdSpace = R.id.restaurant;
                                     space.setText(ChosedSpace.chosed);
-                                    setSpaceValue();
+                                    setValue();
                                     break;
                                 case R.id.entrance:
                                     ChosedSpace.chosed = getResources().getString(R.string.entrance);
                                     checkedItemIdSpace = R.id.entrance;
                                     space.setText(ChosedSpace.chosed);
-                                    setSpaceValue();
+                                    setValue();
                                     break;
                                 case R.id.aisle:
                                     ChosedSpace.chosed = getResources().getString(R.string.aisle);
                                     checkedItemIdSpace = R.id.aisle;
                                     space.setText(ChosedSpace.chosed);
-                                    setSpaceValue();
+                                    setValue();
                                     break;
                             }
                             return true;
@@ -250,79 +250,79 @@ public class Home_display extends ActionBarActivity {
                                     //Toast.makeText(Home_display.this,ChosedType,Toast.LENGTH_SHORT).show();
                                     checkedItemIdType = R.id.crema_marfil;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.golden_lvory:
                                     ChosedType.chosed = getResources().getString(R.string.golden_lvory);
                                     checkedItemIdType = R.id.golden_lvory;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.venice_rice_black:
                                     ChosedType.chosed = getResources().getString(R.string.venice_rice_black);
                                     checkedItemIdType = R.id.venice_rice_black;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.diamond_ti_meters:
                                     ChosedType.chosed = getResources().getString(R.string.diamond_ti_meters);
                                     checkedItemIdType = R.id.diamond_ti_meters;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.King_Kong_Valentino:
                                     ChosedType.chosed = getResources().getString(R.string.King_Kong_Valentino);
                                     checkedItemIdType = R.id.King_Kong_Valentino;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Cloud_Bella_gold:
                                     ChosedType.chosed = getResources().getString(R.string.Cloud_Bella_gold);
                                     checkedItemIdType = R.id.Cloud_Bella_gold;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Century_Beige:
                                     ChosedType.chosed = getResources().getString(R.string.Century_Beige);
                                     checkedItemIdType = R.id.Century_Beige;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Cappuccino:
                                     ChosedType.chosed = getResources().getString(R.string.Cappuccino);
                                     checkedItemIdType = R.id.Cappuccino;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Ultraman:
                                     ChosedType.chosed = getResources().getString(R.string.Ultraman);
                                     checkedItemIdType = R.id.Ultraman;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Modern_wood_grain:
                                     ChosedType.chosed = getResources().getString(R.string.Modern_wood_grain);
                                     checkedItemIdType = R.id.Modern_wood_grain;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Sophie_Te_Kim:
                                     ChosedType.chosed = getResources().getString(R.string.Sophie_Te_Kim);
                                     checkedItemIdType = R.id.Sophie_Te_Kim;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Golden_butterfly:
                                     ChosedType.chosed = getResources().getString(R.string.Golden_butterfly);
                                     checkedItemIdType = R.id.Golden_butterfly;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                                 case R.id.Milan_Chanti:
                                     ChosedType.chosed = getResources().getString(R.string.Milan_Chanti);
                                     checkedItemIdType = R.id.Milan_Chanti;
                                     type.setText(ChosedType.chosed);
-                                    setTypeValue();
+                                    setValue();
                                     break;
                             }
                             return true;
@@ -352,43 +352,43 @@ public class Home_display extends ActionBarActivity {
                                     //Toast.makeText(Home_display.this,ChosedSize,Toast.LENGTH_SHORT).show();
                                     checkedItemIdSize = R.id.a_60A;
                                     size.setText(ChosedSize.chosed);
-                                    setSizeValue();
+                                    setValue();
                                     break;
                                 case R.id.a_60G:
                                     ChosedSize.chosed = getResources().getString(R.string.a_60G);
                                     checkedItemIdSize = R.id.a_60G;
                                     size.setText(ChosedSize.chosed);
-                                    setSizeValue();
+                                    setValue();
                                     break;
                                 case R.id.a_80A:
                                     ChosedSize.chosed = getResources().getString(R.string.a_80A);
                                     checkedItemIdSize = R.id.a_80A;
                                     size.setText(ChosedSize.chosed);
-                                    setSizeValue();
+                                    setValue();
                                     break;
                                 case R.id.a_80B:
                                     ChosedSize.chosed = getResources().getString(R.string.a_80B);
                                     checkedItemIdSize = R.id.a_80B;
                                     size.setText(ChosedSize.chosed);
-                                    setSizeValue();
+                                    setValue();
                                     break;
                                 case R.id.a_80AP:
                                     ChosedSize.chosed = getResources().getString(R.string.a_80AP);
                                     checkedItemIdSize = R.id.a_80AP;
                                     size.setText(ChosedSize.chosed);
-                                    setSizeValue();
+                                    setValue();
                                     break;
                                 case R.id.a_80BP:
                                     ChosedSize.chosed = getResources().getString(R.string.a_80BP);
                                     checkedItemIdSize = R.id.a_80BP;
                                     size.setText(ChosedSize.chosed);
-                                    setSizeValue();
+                                    setValue();
                                     break;
                                 case R.id.a_80CP:
                                     ChosedSize.chosed = getResources().getString(R.string.a_80CP);
                                     checkedItemIdSize = R.id.a_80CP;
                                     size.setText(ChosedSize.chosed);
-                                    setSizeValue();
+                                    setValue();
                                     break;
                             }
                             return true;
@@ -423,33 +423,9 @@ public class Home_display extends ActionBarActivity {
     //与上面封装的对象对应
     ChosedObject[] strings = new ChosedObject[]{ChosedStyle, ChosedSpace, ChosedType, ChosedSize};
 
-    //  menu子菜单的点击事件
-    private void setStyleValue() {
-        getImagePath = new GetImagePath(strings);  //ChosedStyle为输入查询的参数
-        PicList = (ArrayList<String>) getImagePath.getImagePathFromSD();  //获取SD卡中相关图片的路径
-        setGridView();
-    }
 
-    private void setSpaceValue() {
-        System.out.println(Arrays.toString(strings));
-        getImagePath = new GetImagePath(strings);  //ChosedSpace为输入查询的参数
-        System.out.println(Arrays.toString(strings));
-        PicList = (ArrayList<String>) getImagePath.getImagePathFromSD();  //获取SD卡中相关图片的路径
-        setGridView();
-    }
-
-    private void setTypeValue() {
-        System.out.println(Arrays.toString(strings));
-        getImagePath = new GetImagePath(strings);  //ChosedType为输入查询的参数
-        System.out.println(Arrays.toString(strings));
-        PicList = (ArrayList<String>) getImagePath.getImagePathFromSD();  //获取SD卡中相关图片的路径
-        setGridView();
-    }
-
-    private void setSizeValue() {
-        System.out.println(Arrays.toString(strings));
-        getImagePath = new GetImagePath(strings);  //ChosedSize为输入查询的参数
-        System.out.println(Arrays.toString(strings));
+    private void setValue(){
+        getImagePath = new GetImagePath(strings);  //strings为输入查询的参数
         PicList = (ArrayList<String>) getImagePath.getImagePathFromSD();  //获取SD卡中相关图片的路径
         setGridView();
     }
