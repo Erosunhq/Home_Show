@@ -75,7 +75,7 @@ public class Engineering_case extends AppCompatActivity {
             technical_parameter1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagePath = new GetImagePath("images"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
+                    imagePath = new GetImagePath("project"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
                     PicList = imagePath.getImagePathFromSD();
                     gridView.setAdapter(new ImageListAdapter(Engineering_case.this, PicList));
                 }
@@ -87,7 +87,7 @@ public class Engineering_case extends AppCompatActivity {
             technical_parameter2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagePath = new GetImagePath("image"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
+                    imagePath = new GetImagePath("project"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
                     PicList = imagePath.getImagePathFromSD();
                     gridView.setAdapter(new ImageListAdapter(Engineering_case.this, PicList));
                 }

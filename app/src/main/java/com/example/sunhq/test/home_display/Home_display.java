@@ -227,7 +227,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         float density = dm.density;
-        int gridviewWidth = (int) (size * (length + 4) * density + (size - 1) * 10);   //计算宽度时一定要加上图片之间的间隔距离,这里设置的是30
+        int gridviewWidth = (int) (size * (length + 4) * density + (size - 1) * 10);   //计算宽度时一定要加上图片之间的间隔距离,这里设置的是10
         int itemWidth = (int) (length * density);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(

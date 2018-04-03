@@ -44,7 +44,6 @@ public class ShowPic extends AppCompatActivity {
         //接受传过来的信息
         Bundle bundle = getIntent().getExtras();
 
-        final String[] imagePathList = bundle.getStringArray("PicList");
         final ArrayList<String> imagePathListArray = bundle.getStringArrayList("PicListArray");
         final ImageView[] mImageViews = new ImageView[imagePathListArray.size()];
         int currentItem = bundle.getInt("SelectedItem",0);
@@ -56,8 +55,6 @@ public class ShowPic extends AppCompatActivity {
             public Object instantiateItem(ViewGroup container, int position) {
                 ZoomImageView imageView = new ZoomImageView(getApplicationContext());
                 imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));
-                //imageView.setImageResource(mImgs[position]);
-                //imageView.setImageBitmap(BitmapFactory.decodeFile(mImageViews[position]));
                 container.addView(imageView);
                 mImageViews[position] = imageView;
                 return imageView;

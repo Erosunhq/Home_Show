@@ -2,10 +2,7 @@
 
 
 <ImageView android:id="@+id/img"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    app:layout_heightPercent="100%"
-    app:layout_widthPercent="25%"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
 

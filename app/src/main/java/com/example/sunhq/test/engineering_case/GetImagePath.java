@@ -29,7 +29,7 @@ public class GetImagePath {
         List<String> imagePathList = new ArrayList<String>();
         // 得到sd卡内images文件夹的路径   File.separator(/)
         String filePath = Environment.getExternalStorageDirectory().toString() + File.separator
-                + para;
+                + "Picture/"+para;
         // 得到该路径文件夹下所有的文件
         File fileAll = new File(filePath);
         File[] files = fileAll.listFiles();

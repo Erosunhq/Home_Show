@@ -59,6 +59,7 @@ public class Corporate_honor extends AppCompatActivity {
         int resourceId = R.mipmap.logomax_nomargin;
         Picasso.with(this)
                 .load(resourceId)
+                //.placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher)
                 .fit()
                 .tag("image")

@@ -48,9 +48,9 @@ public class GridViewAdapter extends BaseAdapter {
 
         Picasso.with(context)
                 .load(new File(PicList.get(position)))
-                .resize(350,350)   //改变在GridView上的缩略图的大小,到一体机上待修改
+                .resize(380,380)   //改变在GridView上的缩略图的大小,到一体机上待修改  重点修改!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 .centerCrop()
-                .placeholder(R.mipmap.ic_launcher)
+                .placeholder(R.mipmap.loading)
                 .error(R.mipmap.ic_launcher)
                 .noFade()
                 .into((ImageView) convertView);

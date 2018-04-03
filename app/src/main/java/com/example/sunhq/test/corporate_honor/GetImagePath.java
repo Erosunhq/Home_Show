@@ -16,20 +16,13 @@ public class GetImagePath {
     public GetImagePath(String para){  //构造方法
         this.para = para;
     }
-   /* public  void setPara(String para){
-        this.para = para;
-    }
-    public String getPara(){
-        return para;
-    }
-*/
 
     public List<String> getImagePathFromSD(){
         //图片列表
         List<String> imagePathList = new ArrayList<String>();
         // 得到sd卡内images文件夹的路径   File.separator(/)
         String filePath = Environment.getExternalStorageDirectory().toString() + File.separator
-                + para;
+                + "Picture/"+para;
         // 得到该路径文件夹下所有的文件
         File fileAll = new File(filePath);
         File[] files = fileAll.listFiles();
