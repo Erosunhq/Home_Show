@@ -53,12 +53,12 @@ public class Engineering_case extends AppCompatActivity {
             });
         }
 
-        String getPath_logo = Environment.getExternalStorageDirectory() + "/images/logomax_nomargin.png";
         ImageView imageView = (ImageView) findViewById(R.id.logo_home);
         //加载屏幕左边的logo
+        int resourceId = R.mipmap.logomax_nomargin;
         Picasso.with(this)
-                .load(new File(getPath_logo))
-                .placeholder(R.mipmap.ic_launcher)
+                .load(resourceId)
+                //.placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher)
                 .fit()
                 .tag("image")

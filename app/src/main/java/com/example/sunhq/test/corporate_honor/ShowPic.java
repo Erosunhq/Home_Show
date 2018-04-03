@@ -22,14 +22,6 @@ import java.util.ArrayList;
 public class ShowPic extends AppCompatActivity {
 
     private ViewPager mViewPager;
-    // 图片列表
-    //final List<String> imagePathList = new ArrayList<String>();
-
-
-    //private int[] mImgs = new int[]{R.drawable.ss,R.drawable.hh,R.drawable.qq};
-
-   // private ImageView[] mImageViews = new ImageView[mImgs.length];
-    //private ImageView[] mImageViews = new ImageView[mImgs.length];
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,11 +44,9 @@ public class ShowPic extends AppCompatActivity {
         //接受传过来的信息
         Bundle bundle = getIntent().getExtras();
 
-        final String[] imagePathList = bundle.getStringArray("PicList");
         final ArrayList<String> imagePathListArray = bundle.getStringArrayList("PicListArray");
         final ImageView[] mImageViews = new ImageView[imagePathListArray.size()];
         int currentItem = bundle.getInt("SelectedItem",0);
-        //Toast.makeText(ShowPic.this,"imagePathListArray = "+imagePathListArray,Toast.LENGTH_SHORT).show();
 
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
         mViewPager.setAdapter(new PagerAdapter() {
@@ -64,8 +54,6 @@ public class ShowPic extends AppCompatActivity {
             public Object instantiateItem(ViewGroup container, int position) {
                 ZoomImageView imageView = new ZoomImageView(getApplicationContext());
                 imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));
-                //imageView.setImageResource(mImgs[position]);
-                //imageView.setImageBitmap(BitmapFactory.decodeFile(mImageViews[position]));
                 container.addView(imageView);
                 mImageViews[position] = imageView;
                 return imageView;

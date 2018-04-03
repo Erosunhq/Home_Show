@@ -54,11 +54,11 @@ public class Corporate_honor extends AppCompatActivity {
 
 
         imageViewLogo = (ImageView) findViewById(R.id.logo_home);
-        String getPath_logo = Environment.getExternalStorageDirectory() + "/images/logomax_nomargin.png";
+       // String getPath_logo = Environment.getExternalStorageDirectory() + "/images/logomax_nomargin.png";
         //加载屏幕左边的logo
+        int resourceId = R.mipmap.logomax_nomargin;
         Picasso.with(this)
-                .load(new File(getPath_logo))
-                .placeholder(R.mipmap.ic_launcher)
+                .load(resourceId)
                 .error(R.mipmap.ic_launcher)
                 .fit()
                 .tag("image")

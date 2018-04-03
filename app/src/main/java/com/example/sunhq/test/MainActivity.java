@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import com.example.sunhq.test.corporate_honor.Corporate_honor;
 import com.example.sunhq.test.engineering_case.Engineering_case;
 import com.example.sunhq.test.home_display.Home_display;
+import com.example.sunhq.test.home_display.menu.*;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -34,17 +35,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         imageView = (ImageView) findViewById(R.id.logo_home);
-        /*new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Message message = new Message();
-                handler.sendMessage(message);
-            }
-        }).start();*/
+        int resourceId = R.mipmap.logomax_nomargin;
         Picasso.with(this)
-                .load(new File(getPath_logo))
-                .placeholder(R.mipmap.ic_launcher)
+                .load(resourceId)
                 .error(R.mipmap.ic_launcher)
+                //.resize(com.example.sunhq.test.DisplayUtils.dip2px(this,500),com.example.sunhq.test.DisplayUtils.dip2px(this,500))
                 .fit()
                 .tag("image")
                 .into(imageView);
@@ -93,14 +88,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-    /*//异步处理消息,将耗时的获取本地图片资源的操作放在子线程中操作
-    private Handler handler = new Handler(){
-      public void handleMessage(Message message){
-          //从文件夹中获取图片资源并显示到页面
-          Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/images/logomax_nomargin.png");
-          //System.out.print(Environment.getExternalStorageDirectory());
-          imageView.setImageBitmap(bitmap);
-      }
-    };*/
 }
