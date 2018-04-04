@@ -4,9 +4,11 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
+    <!-- 弹出菜单栏,并隐藏右侧的滚动条 -->
     <ListView
         android:id="@+id/pop_list_view"
         android:layout_width="match_parent"
         android:divider="@null"
+        android:scrollbars="none"
         android:layout_height="match_parent"/>
 </LinearLayout>

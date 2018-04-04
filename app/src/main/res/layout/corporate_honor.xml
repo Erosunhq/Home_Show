@@ -23,7 +23,7 @@
         app:layout_widthPercent="5.19%"
         app:layout_marginLeftPercent = "92.59%"
         app:layout_marginTopPercent="15.79%"
-        android:background="@mipmap/corporate_honor"/>
+        android:background="@mipmap/corporate_honor_chosed"/>
 
     <Button
         android:id="@+id/technical_parameter"
@@ -33,7 +33,7 @@
         app:layout_widthPercent="5.19%"
         app:layout_marginLeftPercent = "92.59%"
         app:layout_marginTopPercent="50%"
-        android:background="@mipmap/technical_parameter"/>
+        android:background="@mipmap/technical_parameter_unchosed"/>
 
 
     <GridView
@@ -71,10 +71,10 @@
         android:id="@+id/corporate_honor_back"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_heightPercent = "6%"
-        app:layout_widthPercent="14.33%"
+        app:layout_heightPercent = "5%"
+        app:layout_widthPercent="25.33%"
         app:layout_marginLeftPercent = "3%"
         app:layout_marginTopPercent="90.84%"
-        android:background="@mipmap/home_display_back"/>
+        android:background="@mipmap/corporate_honor_back"/>
 
 </android.support.percent.PercentFrameLayout>

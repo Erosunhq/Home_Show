@@ -44,4 +44,16 @@
     <string name="Milan_Chanti">香蒂米兰</string>
 
 
+
+    <string name="Villa_in_Xishan">苏州太湖西山别墅</string>
+    <string name="Sanya_Yalong_Bay_Deluxe_Hotel">三亚亚龙湾豪华酒店</string>
+    <string name="Shanghai_Garden_Villa">上海滩花园洋房别墅</string>
+    <string name="Shanghai_Yushan_Villa">上海余山别墅</string>
+
+
+    <!-- 点击变换颜色 -->
+    <drawable name="color1">#c1966c</drawable>
+    <drawable name="color2">#FFFFF0</drawable>
+
+
 </resources>

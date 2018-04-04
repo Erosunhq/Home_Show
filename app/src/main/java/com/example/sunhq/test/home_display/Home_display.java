@@ -222,21 +222,21 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
 
 
     private void setGridView() {
-        int size = PicList.size();
-        int length = 100;
-        DisplayMetrics dm = new DisplayMetrics();
+        int size = PicList.size();  // 获得图片集合的长度
+        int length = 100;  //自定义的长度
+        DisplayMetrics dm = new DisplayMetrics(); //获取屏幕分辨率
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         float density = dm.density;
-        int gridviewWidth = (int) (size * (length + 4) * density + (size - 1) * 10);   //计算宽度时一定要加上图片之间的间隔距离,这里设置的是10
+        int gridviewWidth = (int) (size * (length) * density + (size - 1) * 10);   //计算宽度时一定要加上图片之间的间隔距离,这里设置的是10
         int itemWidth = (int) (length * density);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 gridviewWidth, LinearLayout.LayoutParams.FILL_PARENT);
-        gridView.setLayoutParams(params); // 重点
-        gridView.setColumnWidth(itemWidth); // 重点
+        gridView.setLayoutParams(params); // 设置GirdView布局参数,横向布局的关键
+        gridView.setColumnWidth(itemWidth); // 设置列表项宽
         gridView.setHorizontalSpacing(10); // 间距   重点修改********************************
         gridView.setStretchMode(GridView.NO_STRETCH);
-        gridView.setNumColumns(size); // 重点
+        gridView.setNumColumns(size); // 设置列数量=列表集合数
 
         gridViewAdapter = new GridViewAdapter(getApplicationContext(), PicList);
         gridView.setAdapter(gridViewAdapter);
@@ -316,7 +316,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
         popupWindow.setFocusable(true);
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.update();
-        popupWindow.showAsDropDown(space, DisplayUtils.dip2px(this, 7), 25);  //设置菜单的左右偏移量
+        popupWindow.showAsDropDown(space, DisplayUtils.dip2px(this, 3), 25);  //设置菜单的左右偏移量
         mListViewAdapter = new ListViewAdapter(this,mData,popupWindow);
         mPopListView.setAdapter(mListViewAdapter);
     }
@@ -379,7 +379,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
         popupWindow.setFocusable(true);
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.update();
-        popupWindow.showAsDropDown(type, DisplayUtils.dip2px(this, 4), 25);  //设置菜单的左右偏移量
+        popupWindow.showAsDropDown(type, DisplayUtils.dip2px(this, -3), 25);  //设置菜单的左右偏移量
         mListViewAdapter = new ListViewAdapter(this,mData,popupWindow);
         mPopListView.setAdapter(mListViewAdapter);
     }

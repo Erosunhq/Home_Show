@@ -64,30 +64,79 @@ public class Engineering_case extends AppCompatActivity {
                 .tag("image")
                 .into(imageView);
 
+        gridView = (GridView) findViewById(R.id.gridView);
+        imagePath = new GetImagePath("parameter1"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
+        PicList = imagePath.getImagePathFromSD();
+        gridView.setAdapter(new ImageListAdapter(Engineering_case.this, PicList));
+
         /*
         *  中间几个按钮的点击事件
         * */
 
-        gridView = (GridView) findViewById(R.id.gridView);
+        final Button technical_parameter1 = (Button) findViewById(R.id.technical_parameter1);
+        final Button technical_parameter2 = (Button) findViewById(R.id.technical_parameter2);
+        final Button technical_parameter3 = (Button) findViewById(R.id.technical_parameter3);
+        final Button technical_parameter4 = (Button) findViewById(R.id.technical_parameter4);
 
-        Button technical_parameter1 = (Button) findViewById(R.id.technical_parameter1);
+        technical_parameter1.setTextColor(getResources().getColorStateList(R.drawable.color2));   //设置当前的默认选项
+
         if (technical_parameter1 != null) {
             technical_parameter1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagePath = new GetImagePath("project"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
+                    technical_parameter1.setTextColor(getResources().getColorStateList(R.drawable.color2));
+                    technical_parameter2.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter3.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter4.setTextColor(getResources().getColorStateList(R.drawable.color1));  // 这里几个包括下面的几个是为了设置选中后字体颜色的变化
+                    imagePath = new GetImagePath("parameter1"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
                     PicList = imagePath.getImagePathFromSD();
                     gridView.setAdapter(new ImageListAdapter(Engineering_case.this, PicList));
                 }
             });
         }
 
-        Button technical_parameter2 = (Button) findViewById(R.id.technical_parameter2);
+
         if (technical_parameter2 != null) {
             technical_parameter2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    imagePath = new GetImagePath("project"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
+                    technical_parameter2.setTextColor(getResources().getColorStateList(R.drawable.color2));
+                    technical_parameter1.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter3.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter4.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    imagePath = new GetImagePath("parameter2"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
+                    PicList = imagePath.getImagePathFromSD();
+                    gridView.setAdapter(new ImageListAdapter(Engineering_case.this, PicList));
+                }
+            });
+        }
+
+
+        if (technical_parameter3 != null) {
+            technical_parameter3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    technical_parameter3.setTextColor(getResources().getColorStateList(R.drawable.color2));
+                    technical_parameter2.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter1.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter4.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    imagePath = new GetImagePath("parameter3"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
+                    PicList = imagePath.getImagePathFromSD();
+                    gridView.setAdapter(new ImageListAdapter(Engineering_case.this, PicList));
+                }
+            });
+        }
+
+
+        if (technical_parameter4 != null) {
+            technical_parameter4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    technical_parameter4.setTextColor(getResources().getColorStateList(R.drawable.color2));
+                    technical_parameter2.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter3.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    technical_parameter1.setTextColor(getResources().getColorStateList(R.drawable.color1));
+                    imagePath = new GetImagePath("parameter4"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
                     PicList = imagePath.getImagePathFromSD();
                     gridView.setAdapter(new ImageListAdapter(Engineering_case.this, PicList));
                 }
@@ -139,9 +188,9 @@ public class Engineering_case extends AppCompatActivity {
                     Picasso
                             .with(context)
                             .load(new File(PicList.get(position)))
-                            .placeholder(R.mipmap.ic_launcher)
+                            //.placeholder(R.mipmap.loading_throbber)
                             .error(R.mipmap.ic_launcher)
-                            .resize(310,310)
+                            .resize(305,305)
                             .noFade()
                             .into((ImageView) convertView);
                 }

@@ -21,52 +21,58 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_heightPercent = "10.24%"
-        app:layout_widthPercent="12.59%"
-        app:layout_marginLeftPercent = "31.85%"
+        app:layout_widthPercent="17.59%"
+        app:layout_marginLeftPercent = "30.85%"
         app:layout_marginTopPercent="29.21%"
-        android:text="111"/>
+        android:text="@string/Villa_in_Xishan"
+        android:background="#00000000"
+        android:textColor="#c1966c"
+        android:textSize="12dp"
+        android:gravity="left"/>
 
     <Button
         android:id="@+id/technical_parameter2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_heightPercent = "10.24%"
-        app:layout_widthPercent="12.59%"
-        app:layout_marginLeftPercent = "31.85%"
+        app:layout_widthPercent="17.59%"
+        app:layout_marginLeftPercent = "30.85%"
         app:layout_marginTopPercent="39.21%"
-        android:text="222"/>
+        android:text="@string/Sanya_Yalong_Bay_Deluxe_Hotel"
+        android:background="#00000000"
+        android:textColor="#c1966c"
+        android:textSize="12dp"
+        android:gravity="left"/>
 
 
     <Button
         android:id="@+id/technical_parameter3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_heightPercent = "7.24%"
-        app:layout_widthPercent="12.59%"
-        app:layout_marginLeftPercent = "31.85%"
+        app:layout_heightPercent = "10.24%"
+        app:layout_widthPercent="17.59%"
+        app:layout_marginLeftPercent = "30.85%"
         app:layout_marginTopPercent="49.21%"
-        android:background="@color/white"/>
+        android:text="@string/Shanghai_Garden_Villa"
+        android:background="#00000000"
+        android:textColor="#c1966c"
+        android:textSize="12dp"
+        android:gravity="left"/>
 
 
     <Button
         android:id="@+id/technical_parameter4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_heightPercent = "7.24%"
-        app:layout_widthPercent="12.59%"
-        app:layout_marginLeftPercent = "31.85%"
+        app:layout_heightPercent = "10.24%"
+        app:layout_widthPercent="17.59%"
+        app:layout_marginLeftPercent = "30.85%"
         app:layout_marginTopPercent="59.21%"
-        android:background="@color/white"/>
-
-    <Button
-        android:id="@+id/technical_parameter5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_heightPercent = "7.24%"
-        app:layout_widthPercent="12.59%"
-        app:layout_marginLeftPercent = "31.85%"
-        app:layout_marginTopPercent="69.21%"
-        android:background="@color/white"/>
+        android:text="@string/Shanghai_Yushan_Villa"
+        android:background="#00000000"
+        android:textColor="#c1966c"
+        android:textSize="12dp"
+        android:gravity="left"/>
 
     <GridView
         android:id="@+id/gridView"
@@ -78,18 +84,15 @@
         app:layout_marginTopPercent="13.16%"
         android:padding="10dp"
         android:numColumns="3"
-        android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
         android:background="@mipmap/border"/>
-
-
 
     <Button
         android:id="@+id/engineering_case_back"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_heightPercent = "5%"
-        app:layout_widthPercent="14.33%"
+        app:layout_widthPercent="15.33%"
         app:layout_marginLeftPercent = "3%"
         app:layout_marginTopPercent="90.84%"
         android:background="@mipmap/engineer_case_back"/>

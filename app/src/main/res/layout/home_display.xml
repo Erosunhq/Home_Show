@@ -22,7 +22,7 @@
         app:layout_widthPercent="38.52%"
         app:layout_marginLeftPercent = "0%"
         app:layout_marginTopPercent="36.84%"
-        android:src="@mipmap/left"/>
+        android:src="@mipmap/line_left"/>
 
     <ImageView
         android:id="@+id/right_home_display"
@@ -32,7 +32,7 @@
         app:layout_widthPercent="38.52%"
         app:layout_marginLeftPercent = "62%"
         app:layout_marginTopPercent="36.84%"
-        android:src="@mipmap/right"/>
+        android:src="@mipmap/line_right"/>
 
 
     <Button
@@ -41,12 +41,13 @@
         android:layout_height="0dp"
         app:layout_heightPercent = "4.5%"
         app:layout_widthPercent="10.04%"
-        app:layout_marginLeftPercent = "8.63%"
+        app:layout_marginLeftPercent = "4%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
         android:textColor="@color/project_used"
         android:drawableLeft="@mipmap/style"
-        android:text="@string/style"/>
+        android:text="@string/style"
+        android:textSize="13dp"/>
 
     <!-- 每个按钮右边紧跟着一个隐藏的取消按钮 -->
     <Button
@@ -55,9 +56,9 @@
         android:layout_height="0dp"
         android:visibility="invisible"
         app:layout_heightPercent = "3.5%"
-        app:layout_widthPercent="2.2%"
-        app:layout_marginLeftPercent = "19%"
-        app:layout_marginTopPercent="41.8%"
+        app:layout_widthPercent="2%"
+        app:layout_marginLeftPercent = "14.5%"
+        app:layout_marginTopPercent="41.5%"
         android:background="@mipmap/exit"/>
 
     <Button
@@ -65,13 +66,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_heightPercent = "4.5%"
-        app:layout_widthPercent="10.04%"
-        app:layout_marginLeftPercent = "22.96%"
+        app:layout_widthPercent="12.04%"
+        app:layout_marginLeftPercent = "20.96%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
         android:textColor="@color/project_used"
         android:drawableLeft="@mipmap/bedroom"
-        android:text="@string/space"/>
+        android:text="@string/space"
+        android:textSize="13dp"/>
     <!-- 每个按钮右边紧跟着一个隐藏的取消按钮 -->
     <Button
         android:id="@+id/space_back"
@@ -79,9 +81,9 @@
         android:layout_height="0dp"
         android:visibility="invisible"
         app:layout_heightPercent = "3.5%"
-        app:layout_widthPercent="2.2%"
+        app:layout_widthPercent="2%"
         app:layout_marginLeftPercent = "32.6%"
-        app:layout_marginTopPercent="41.8%"
+        app:layout_marginTopPercent="41.5%"
         android:background="@mipmap/exit"/>
 
     <Button
@@ -89,13 +91,20 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_heightPercent = "4.5%"
-        app:layout_widthPercent="10.04%"
-        app:layout_marginLeftPercent = "65.19%"
+        app:layout_widthPercent="15.04%"
+        app:layout_marginLeftPercent = "67.19%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
         android:textColor="@color/project_used"
         android:drawableLeft="@mipmap/type"
-        android:text="@string/ceramic"/>
+        android:text="@string/ceramic"
+        android:textSize="13dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"  />
     <!-- 每个按钮右边紧跟着一个隐藏的取消按钮 -->
     <Button
         android:id="@+id/type_back"
@@ -103,9 +112,9 @@
         android:layout_height="0dp"
         android:visibility="invisible"
         app:layout_heightPercent = "3.5%"
-        app:layout_widthPercent="2.2%"
-        app:layout_marginLeftPercent = "75%"
-        app:layout_marginTopPercent="41.8%"
+        app:layout_widthPercent="2%"
+        app:layout_marginLeftPercent = "81.5%"
+        app:layout_marginTopPercent="41.5%"
         android:background="@mipmap/exit"/>
 
     <Button
@@ -114,12 +123,13 @@
         android:layout_height="0dp"
         app:layout_heightPercent = "4.5%"
         app:layout_widthPercent="10.04%"
-        app:layout_marginLeftPercent = "80.22%"
+        app:layout_marginLeftPercent = "87%"
         app:layout_marginTopPercent="40.79%"
         android:background="#00000000"
         android:textColor="@color/project_used"
         android:drawableLeft="@mipmap/size"
-        android:text="@string/format"/>
+        android:text="@string/format"
+        android:textSize="13dp"/>
     <!-- 每个按钮右边紧跟着一个隐藏的取消按钮 -->
     <Button
         android:id="@+id/size_back"
@@ -127,9 +137,9 @@
         android:layout_height="0dp"
         android:visibility="invisible"
         app:layout_heightPercent = "3.5%"
-        app:layout_widthPercent="2.2%"
-        app:layout_marginLeftPercent = "90.5%"
-        app:layout_marginTopPercent="41.8%"
+        app:layout_widthPercent="2%"
+        app:layout_marginLeftPercent = "97%"
+        app:layout_marginTopPercent="41.5%"
         android:background="@mipmap/exit"/>
 
     <Button
@@ -137,13 +147,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_heightPercent = "6%"
-        app:layout_widthPercent="14.33%"
+        app:layout_widthPercent="15.33%"
         app:layout_marginLeftPercent = "3%"
         app:layout_marginTopPercent="90.84%"
         android:background="@mipmap/home_display_back"
         />
 
 
+    <!--  关于横屏滚动条的问题, HorizontalScrollView 和GridView都有滚动条,要同时去除 -->
     <HorizontalScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
@@ -151,11 +162,11 @@
         app:layout_heightPercent = "25%"
         app:layout_widthPercent="63%"
         app:layout_marginLeftPercent = "18.52%"
-        app:layout_marginTopPercent="7.89%">
+        app:layout_marginTopPercent="7.89%"
+        android:scrollbars="none">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
                 <GridView
                     android:id="@+id/top_gridView"
                     android:layout_width="wrap_content"
