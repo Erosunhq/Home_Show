@@ -75,19 +75,22 @@ public class Corporate_honor extends AppCompatActivity {
         }); //返回到上一界面
 
         gridView = (GridView) findViewById(R.id.gridView);
-        imagePath = new GetImagePath("image"); // 这里依据传入的字符串不同,方法获得不同的文件夹,展示不同的图片
-        PicList =  imagePath.getImagePathFromSD();
-        gridView.setAdapter(new ImageListAdapter(Corporate_honor.this,PicList));
+
         /*
          * 技术参数的按钮
          * */
+        final ImageView image_tech = (ImageView) findViewById(R.id.image_tech);
         technical_parameter = (Button) findViewById(R.id.technical_parameter);
+        technical_parameter.setBackgroundResource(R.mipmap.technical_parameter_chosed);
         technical_parameter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 technical_parameter.setBackgroundResource(R.mipmap.technical_parameter_chosed);
                 corporate_honor.setBackgroundResource(R.mipmap.corporate_honor_unchosed);
                 gridView.setVisibility(View.INVISIBLE);
+                image_tech.setVisibility(View.VISIBLE);
+
+
             }
         });
 
@@ -104,6 +107,7 @@ public class Corporate_honor extends AppCompatActivity {
                 PicList =  imagePath.getImagePathFromSD();
                 gridView.setAdapter(new ImageListAdapter(Corporate_honor.this,PicList));
                 gridView.setVisibility(View.VISIBLE);
+                image_tech.setVisibility(View.INVISIBLE);
 
             }
         });

@@ -23,7 +23,7 @@
         app:layout_widthPercent="5.19%"
         app:layout_marginLeftPercent = "92.59%"
         app:layout_marginTopPercent="15.79%"
-        android:background="@mipmap/corporate_honor_chosed"/>
+        android:background="@mipmap/corporate_honor_unchosed"/>
 
     <Button
         android:id="@+id/technical_parameter"
@@ -33,7 +33,7 @@
         app:layout_widthPercent="5.19%"
         app:layout_marginLeftPercent = "92.59%"
         app:layout_marginTopPercent="50%"
-        android:background="@mipmap/technical_parameter_unchosed"/>
+        android:background="@mipmap/technical_parameter_chosed"/>
 
 
     <GridView
@@ -51,19 +51,18 @@
         android:background="@mipmap/border"/>
 
     <!-- 技术参数的表格 -->
-    <TableLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_heightPercent = "67.76%"
-        app:layout_widthPercent="60%"
-        app:layout_marginLeftPercent = "30.37%"
-        app:layout_marginTopPercent="14.47%"
-        android:visibility="invisible"
-        android:background="@mipmap/border">
 
+ <ImageView
+     android:id="@+id/image_tech"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     app:layout_heightPercent = "67.76%"
+     app:layout_widthPercent="60%"
+     app:layout_marginLeftPercent = "30.37%"
+     app:layout_marginTopPercent="14.47%"
+     android:visibility="visible"
+     android:background="@mipmap/technical_parameter"/>
 
-
-    </TableLayout>
 
 
 
@@ -75,6 +74,7 @@
         app:layout_widthPercent="25.33%"
         app:layout_marginLeftPercent = "3%"
         app:layout_marginTopPercent="90.84%"
-        android:background="@mipmap/corporate_honor_back"/>
+        android:background="@mipmap/corporate_honor_back"
+        />
 
 </android.support.percent.PercentFrameLayout>
