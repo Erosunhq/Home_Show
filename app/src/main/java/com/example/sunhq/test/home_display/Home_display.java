@@ -95,7 +95,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                // .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher)
                 .fit()
-                .memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+               // .memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
                 .tag("image")
                 .into(imageView);
 

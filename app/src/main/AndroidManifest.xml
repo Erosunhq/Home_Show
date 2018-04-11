@@ -18,12 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home_display.Home_display"></activity>
-        <activity android:name=".home_display.ShowPic"></activity>
-        <activity android:name=".corporate_honor.Corporate_honor"></activity>
-        <activity android:name=".engineering_case.Engineering_case"></activity>
-        <activity android:name=".corporate_honor.ShowPic"></activity>
-        <activity android:name=".engineering_case.ShowPic"></activity>
+        <activity android:name=".home_display.Home_display"/>
+        <activity android:name=".home_display.ShowPic"/>
+        <activity android:name=".corporate_honor.Corporate_honor"/>
+        <activity android:name=".engineering_case.Engineering_case"/>
+        <activity android:name=".corporate_honor.ShowPic"/>
+        <activity android:name=".engineering_case.ShowPic"/>
     </application>
 
 </manifest>

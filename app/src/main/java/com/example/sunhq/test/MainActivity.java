@@ -14,6 +14,7 @@ import com.example.sunhq.test.corporate_honor.Corporate_honor;
 import com.example.sunhq.test.engineering_case.Engineering_case;
 import com.example.sunhq.test.home_display.Home_display;
 import com.example.sunhq.test.home_display.menu.*;
+import com.squareup.leakcanary.LeakCanary;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -21,7 +22,7 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
-    String getPath_logo = Environment.getExternalStorageDirectory() + "/images/logomax_nomargin.png";
+    //String getPath_logo = Environment.getExternalStorageDirectory() + "/images/logomax_nomargin.png";
     ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         final View view = View.inflate(this, R.layout.activity_main,null);
         setContentView(view);
+        LeakCanary.install(this.getApplication());
 
         imageView = (ImageView) findViewById(R.id.logo_home);
         int resourceId = R.mipmap.logomax_nomargin;

@@ -1,5 +1,6 @@
 package com.example.sunhq.test.home_display;
 
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -54,6 +55,7 @@ public class ShowPic extends AppCompatActivity {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
                 ZoomImageView imageView = new ZoomImageView(getApplicationContext());
+
                 imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));
                 container.addView(imageView);
                 mImageViews[position] = imageView;

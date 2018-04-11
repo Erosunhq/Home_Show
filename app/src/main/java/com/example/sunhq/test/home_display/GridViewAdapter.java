@@ -50,7 +50,7 @@ public class GridViewAdapter extends BaseAdapter {
                 .load(new File(PicList.get(position)))
                 .resize(360,360)   //改变在GridView上的缩略图的大小,到一体机上待修改  重点修改!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 .centerCrop()
-                //.placeholder(R.mipmap.rotate_3d)
+                .placeholder(R.mipmap.loading)
                 .error(R.mipmap.ic_launcher)
                 .noFade()
                 .into((ImageView) convertView);
