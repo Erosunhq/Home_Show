@@ -1,6 +1,5 @@
 package com.example.sunhq.test.home_display;
 
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -12,8 +11,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.sunhq.test.R;
+import com.example.sunhq.test.home_display.sliding_effect.ZoomOutPageTransformer;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 public class ShowPic extends AppCompatActivity {
 
     private ViewPager mViewPager;
+    private TextView currentPage;
+    ZoomImageView imageView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,23 +45,49 @@ public class ShowPic extends AppCompatActivity {
             });
         }
 
+        /*
+        * 显示页码的TextView
+        * */
+        currentPage = (TextView) findViewById(R.id.currentPage);
+
+
         //接受传过来的信息
         Bundle bundle = getIntent().getExtras();
 
         final ArrayList<String> imagePathListArray = bundle.getStringArrayList("PicListArray");
         final ImageView[] mImageViews = new ImageView[imagePathListArray.size()];
-        int currentItem = bundle.getInt("SelectedItem",0);
+        final int currentItem = bundle.getInt("SelectedItem",0);
         //Toast.makeText(ShowPic.this,"imagePathListArray = "+imagePathListArray,Toast.LENGTH_SHORT).show();
 
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
+        //设置图片切换时的动画效果(下面是两种效果,任选一种)
+        //mViewPager.setPageTransformer(true,new DepthPageTransformer());
+        mViewPager.setPageTransformer(true,new ZoomOutPageTransformer());
         mViewPager.setAdapter(new PagerAdapter() {
+            // 一屏显示多张图片
+            /*public float getPageWidth(int position) {
+                return (float) 0.6;
+            }
+*/
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
-                ZoomImageView imageView = new ZoomImageView(getApplicationContext());
+                /*
+                * 设置页码
+                * 当前页码  /  总共页码
+                * */
+                currentPage.setText(position +" / "+ mImageViews.length);
+                currentPage.setTextColor(0xffc1966c);
+                /****************************************************************/
 
+                imageView = new ZoomImageView(getApplicationContext());
+                /*
+                * 下面这容易报OOM的错
+                *
+                * */
                 imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));
                 container.addView(imageView);
                 mImageViews[position] = imageView;
+
                 return imageView;
             }
             @Override
