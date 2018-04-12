@@ -125,6 +125,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                 ChosedStyle = new ChosedObject("");  // 点击 该按钮将已选项置为空
                 style_back.setVisibility(View.INVISIBLE);
                 style.setText(Home_display.this.getResources().getString(R.string.style));
+                style.setTextColor(getResources().getColor(R.color.project_used));
                 strings = new ChosedObject[]{ChosedStyle, ChosedSpace, ChosedType, ChosedSize};
                 setValue();
             }
@@ -138,6 +139,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                 strings = new ChosedObject[]{ChosedStyle, ChosedSpace, ChosedType, ChosedSize};
                 space_back.setVisibility(View.INVISIBLE);
                 space.setText(Home_display.this.getResources().getString(R.string.space));
+                space.setTextColor(getResources().getColor(R.color.project_used));
                 setValue();
             }
         });
@@ -149,6 +151,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                 strings = new ChosedObject[]{ChosedStyle, ChosedSpace, ChosedType, ChosedSize};
                 type_back.setVisibility(View.INVISIBLE);
                 type.setText(Home_display.this.getResources().getString(R.string.ceramic));
+                type.setTextColor(getResources().getColor(R.color.project_used));
                 setValue();
             }
         });
@@ -160,6 +163,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                 strings = new ChosedObject[]{ChosedStyle, ChosedSpace, ChosedType, ChosedSize};
                 size_back.setVisibility(View.INVISIBLE);
                 size.setText(Home_display.this.getResources().getString(R.string.format));
+                size.setTextColor(getResources().getColor(R.color.project_used));
                 setValue();
             }
         });
@@ -441,21 +445,25 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                         case 5:
                             ChosedStyle.chosed = mData.get(position);
                             style.setText(ChosedStyle.chosed);
+                            style.setTextColor(getResources().getColor(R.color.white));
                             style_back.setVisibility(View.VISIBLE);
                             break;
                         case 7:
                             ChosedSpace.chosed = mData.get(position);
                             space.setText(ChosedSpace.chosed);
+                            space.setTextColor(getResources().getColor(R.color.white));
                             space_back.setVisibility(View.VISIBLE);
                             break;
                         case 13:
                             ChosedType.chosed = mData.get(position);
                             type.setText(ChosedType.chosed);
+                            type.setTextColor(getResources().getColor(R.color.white));
                             type_back.setVisibility(View.VISIBLE);
                             break;
                         case 6:
                             ChosedSize.chosed = mData.get(position);
                             size.setText(ChosedSize.chosed);
+                            size.setTextColor(getResources().getColor(R.color.white));
                             size_back.setVisibility(View.VISIBLE);
                             break;
                     }

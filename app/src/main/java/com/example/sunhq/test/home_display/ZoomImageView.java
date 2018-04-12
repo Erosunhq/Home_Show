@@ -3,6 +3,7 @@ package com.example.sunhq.test.home_display;
 /**
  * Created by Sunhq on 2018/3/29.
  */
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Matrix;
 import android.graphics.RectF;
@@ -18,6 +19,7 @@ import android.view.View.OnTouchListener;
 import android.view.ViewConfiguration;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class ZoomImageView extends ImageView implements OnGlobalLayoutListener,
         OnScaleGestureListener, OnTouchListener {
@@ -102,8 +104,15 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener,
                         }
                         return true;
                     }
+
+                    public boolean onSingleTapConfirmed(MotionEvent e){
+                        //setVisibility(INVISIBLE);  //当前图片的消失
+                        return true;
+                    }
+
                 });
     }
+
 
     /**
      * 自动放大与缩小
