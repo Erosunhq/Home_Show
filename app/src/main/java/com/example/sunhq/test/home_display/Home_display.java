@@ -322,7 +322,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
         popupWindow.setFocusable(true);
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.update();
-        popupWindow.showAsDropDown(space, DisplayUtils.dip2px(this, 3), 25);  //设置菜单的左右偏移量
+        popupWindow.showAsDropDown(space, DisplayUtils.dip2px(this, 8), 25);  //设置菜单的左右偏移量
         mListViewAdapter = new ListViewAdapter(this,mData,popupWindow);
         mPopListView.setAdapter(mListViewAdapter);
     }
