@@ -69,7 +69,7 @@ public class GetImagePath {
 
     // 检查文件夹下文件的扩展名,得到图片格式的文件
     private boolean checkIsImageFile(String name) {
-        boolean isImageFile = false;
+        boolean isImageFile;
 
         //获取扩展名   后缀名匹配
         String FileEnd = name.substring(name.lastIndexOf(".") + 1,name.length()).toLowerCase();

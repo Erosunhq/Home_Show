@@ -60,9 +60,33 @@ public class ShowPic extends AppCompatActivity {
         //Toast.makeText(ShowPic.this,"imagePathListArray = "+imagePathListArray,Toast.LENGTH_SHORT).show();
 
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
+
+        /*
+        * 设置页码
+        * 当前页码  /  总共页码
+       * */
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+            @Override
+            public void onPageSelected(int position) {
+                int currentPosition = position;
+                currentPage.setText(currentPosition+1 +" / "+ mImageViews.length);
+                currentPage.setTextColor(0xffc1966c);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         //设置图片切换时的动画效果(下面是两种效果,任选一种)
         //mViewPager.setPageTransformer(true,new DepthPageTransformer());
         mViewPager.setPageTransformer(true,new ZoomOutPageTransformer());
+        /****************************************************************/
         mViewPager.setAdapter(new PagerAdapter() {
             // 一屏显示多张图片
             /*public float getPageWidth(int position) {
@@ -71,12 +95,6 @@ public class ShowPic extends AppCompatActivity {
 */
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
-                /*
-                * 设置页码
-                * 当前页码  /  总共页码
-                * */
-                currentPage.setText(position +" / "+ mImageViews.length);
-                currentPage.setTextColor(0xffc1966c);
                 /****************************************************************/
 
                 imageView = new ZoomImageView(getApplicationContext());
