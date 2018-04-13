@@ -15,7 +15,10 @@ import android.widget.TextView;
 
 import com.example.sunhq.test.R;
 import com.example.sunhq.test.home_display.sliding_effect.ZoomOutPageTransformer;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -45,10 +48,7 @@ public class ShowPic extends AppCompatActivity {
             });
         }
 
-        /*
-        * 显示页码的TextView
-        * */
-        currentPage = (TextView) findViewById(R.id.currentPage);
+
 
 
         //接受传过来的信息
@@ -60,7 +60,10 @@ public class ShowPic extends AppCompatActivity {
         //Toast.makeText(ShowPic.this,"imagePathListArray = "+imagePathListArray,Toast.LENGTH_SHORT).show();
 
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
-
+        /*
+        * 显示页码的TextView
+        * */
+        currentPage = (TextView) findViewById(R.id.currentPage);
         /*
         * 设置页码
         * 当前页码  /  总共页码
@@ -99,11 +102,22 @@ public class ShowPic extends AppCompatActivity {
                 /****************************************************************/
 
                 imageView = new ZoomImageView(getApplicationContext());
+
+                /*
+                * 能不能用Picasso来实现显示大图
+                * */
+                Picasso.with(ShowPic.this)
+                        .load(new File(imagePathListArray.get(position)))
+                        .fit()
+                        .error(R.mipmap.error)
+
+                        .centerInside()
+                        .into(imageView);
                 /*
                 * 下面这容易报OOM的错
                 *
                 * */
-                imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));
+                /*imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));*/
                 container.addView(imageView);
                 mImageViews[position] = imageView;
 

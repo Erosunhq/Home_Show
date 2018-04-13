@@ -11,9 +11,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.sunhq.test.R;
+import com.example.sunhq.test.home_display.sliding_effect.ZoomOutPageTransformer;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -22,6 +27,7 @@ import java.util.ArrayList;
 public class ShowPic extends AppCompatActivity {
 
     private ViewPager mViewPager;
+    private TextView currentPage;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +47,7 @@ public class ShowPic extends AppCompatActivity {
             });
         }
 
+
         //接受传过来的信息
         Bundle bundle = getIntent().getExtras();
 
@@ -49,11 +56,46 @@ public class ShowPic extends AppCompatActivity {
         int currentItem = bundle.getInt("SelectedItem",0);
 
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
+         /*
+        * 显示页码的TextView
+        * */
+        currentPage = (TextView) findViewById(R.id.currentPage);
+        /*
+        * 设置页码
+        * 当前页码  /  总共页码
+        * */
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+            @Override
+            public void onPageSelected(int position) {
+                int currentPosition = position;
+                currentPage.setText(currentPosition+1 +" / "+ mImageViews.length);
+                currentPage.setTextColor(0xffc1966c);
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        /***********************************************************************************************/
+        //设置图片切换时的动画效果(下面是两种效果,任选一种)
+        //mViewPager.setPageTransformer(true,new DepthPageTransformer());
+        mViewPager.setPageTransformer(true,new ZoomOutPageTransformer());
+        /****************************************************************/
         mViewPager.setAdapter(new PagerAdapter() {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
                 ZoomImageView imageView = new ZoomImageView(getApplicationContext());
-                imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));
+                Picasso.with(ShowPic.this)
+                        .load(new File(imagePathListArray.get(position)))
+                        .fit()
+                        .error(R.mipmap.error)
+                        .centerInside()
+                        .into(imageView);
+                /*imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));*/
                 container.addView(imageView);
                 mImageViews[position] = imageView;
                 return imageView;

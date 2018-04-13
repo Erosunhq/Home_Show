@@ -60,7 +60,7 @@ public class Corporate_honor extends AppCompatActivity {
         Picasso.with(this)
                 .load(resourceId)
                 //.placeholder(R.mipmap.ic_launcher)
-                .error(R.mipmap.ic_launcher)
+                .error(R.mipmap.error)
                 .fit()
                 .tag("image")
                 .into(imageViewLogo);

@@ -93,7 +93,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
         Picasso.with(this)
                 .load(resourceId)
                // .placeholder(R.mipmap.ic_launcher)
-                .error(R.mipmap.ic_launcher)
+                .error(R.mipmap.error)
                 .fit()
                // .memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
                 .tag("image")

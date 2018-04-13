@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         int resourceId = R.mipmap.logomax_nomargin;
         Picasso.with(this)
                 .load(resourceId)
-                .error(R.mipmap.ic_launcher)
+                .error(R.mipmap.error)
                 //.resize(com.example.sunhq.test.DisplayUtils.dip2px(this,500),com.example.sunhq.test.DisplayUtils.dip2px(this,500))
                 .fit()
                 .tag("image")

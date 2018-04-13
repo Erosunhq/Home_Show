@@ -7,6 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.example.sunhq.test.R;
+import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -44,12 +45,12 @@ public class GridViewAdapter extends BaseAdapter {
         if (convertView == null){
             convertView = View.inflate(context, R.layout.home_display_gridview_item,null);
         }
-        //ImageView imageView = (ImageView) convertView;
 
         Picasso.with(context)
                 .load(new File(PicList.get(position)))
                 .resize(360,360)   //改变在GridView上的缩略图的大小,到一体机上待修改  重点修改!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 .centerCrop()
+                .memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
                 .placeholder(R.mipmap.loading)
                 .error(R.mipmap.ic_launcher)
                 .noFade()
