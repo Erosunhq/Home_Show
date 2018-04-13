@@ -64,7 +64,7 @@ public class ShowPic extends AppCompatActivity {
         /*
         * 设置页码
         * 当前页码  /  总共页码
-       * */
+        * */
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -76,13 +76,14 @@ public class ShowPic extends AppCompatActivity {
                 currentPage.setText(currentPosition+1 +" / "+ mImageViews.length);
                 currentPage.setTextColor(0xffc1966c);
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
 
             }
         });
 
+
+        /***********************************************************************************************/
         //设置图片切换时的动画效果(下面是两种效果,任选一种)
         //mViewPager.setPageTransformer(true,new DepthPageTransformer());
         mViewPager.setPageTransformer(true,new ZoomOutPageTransformer());

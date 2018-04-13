@@ -229,7 +229,7 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
 
     private void setGridView() {
         int size = PicList.size();  // 获得图片集合的长度
-        int length = 100;  //自定义的长度
+        int length = 98;  //自定义的长度   每个缩略图在GridView上显示的宽度...重点修改********************************
         DisplayMetrics dm = new DisplayMetrics(); //获取屏幕分辨率
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         float density = dm.density;
