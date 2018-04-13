@@ -1,6 +1,7 @@
 package com.example.sunhq.test.home_display;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -50,7 +51,7 @@ public class GridViewAdapter extends BaseAdapter {
                 .load(new File(PicList.get(position)))
                 .resize(360,360)   //改变在GridView上的缩略图的大小,到一体机上待修改  重点修改!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 .centerCrop()
-                .memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
+                .config(Bitmap.Config.RGB_565)
                 .placeholder(R.mipmap.loading)
                 .error(R.mipmap.ic_launcher)
                 .noFade()

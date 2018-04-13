@@ -1,5 +1,6 @@
 package com.example.sunhq.test.home_display;
 
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -110,18 +111,21 @@ public class ShowPic extends AppCompatActivity {
                         .load(new File(imagePathListArray.get(position)))
                         .fit()
                         .error(R.mipmap.error)
-
                         .centerInside()
+                        .config(Bitmap.Config.RGB_565)
                         .into(imageView);
                 /*
                 * 下面这容易报OOM的错
-                *
                 * */
                 /*imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));*/
                 container.addView(imageView);
                 mImageViews[position] = imageView;
-
+                onDetachedFromWindow();
                 return imageView;
+            }
+
+            protected void onDetachedFromWindow() {
+                imageView.setImageDrawable(null);
             }
             @Override
             public void destroyItem(ViewGroup container, int position,

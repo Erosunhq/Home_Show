@@ -1,5 +1,6 @@
 package com.example.sunhq.test.engineering_case;
 
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -95,6 +96,7 @@ public class ShowPic extends AppCompatActivity {
                         .fit()
                         .error(R.mipmap.error)
                         .centerInside()
+                        .config(Bitmap.Config.RGB_565)
                         .into(imageView);
                 /*imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));*/
                 container.addView(imageView);
