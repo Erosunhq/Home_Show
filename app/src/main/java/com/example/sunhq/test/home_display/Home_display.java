@@ -95,7 +95,6 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                // .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.error)
                 .fit()
-               // .memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE)
                 .tag("image")
                 .into(imageView);
 
@@ -445,25 +444,25 @@ public class Home_display extends ActionBarActivity implements View.OnClickListe
                         case 5:
                             ChosedStyle.chosed = mData.get(position);
                             style.setText(ChosedStyle.chosed);
-                            style.setTextColor(getResources().getColor(R.color.white));
+                            style.setTextColor(getResources().getColor(R.color.bisque));
                             style_back.setVisibility(View.VISIBLE);
                             break;
                         case 7:
                             ChosedSpace.chosed = mData.get(position);
                             space.setText(ChosedSpace.chosed);
-                            space.setTextColor(getResources().getColor(R.color.white));
+                            space.setTextColor(getResources().getColor(R.color.bisque));
                             space_back.setVisibility(View.VISIBLE);
                             break;
                         case 13:
                             ChosedType.chosed = mData.get(position);
                             type.setText(ChosedType.chosed);
-                            type.setTextColor(getResources().getColor(R.color.white));
+                            type.setTextColor(getResources().getColor(R.color.bisque));
                             type_back.setVisibility(View.VISIBLE);
                             break;
                         case 6:
                             ChosedSize.chosed = mData.get(position);
                             size.setText(ChosedSize.chosed);
-                            size.setTextColor(getResources().getColor(R.color.white));
+                            size.setTextColor(getResources().getColor(R.color.bisque));
                             size_back.setVisibility(View.VISIBLE);
                             break;
                     }

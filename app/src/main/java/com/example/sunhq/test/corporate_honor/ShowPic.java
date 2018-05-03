@@ -29,6 +29,7 @@ public class ShowPic extends AppCompatActivity {
 
     private ViewPager mViewPager;
     private TextView currentPage;
+    ZoomImageView imageView;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +90,7 @@ public class ShowPic extends AppCompatActivity {
         mViewPager.setAdapter(new PagerAdapter() {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
-                ZoomImageView imageView = new ZoomImageView(getApplicationContext());
+                imageView = new ZoomImageView(getApplicationContext());
                 Picasso.with(ShowPic.this)
                         .load(new File(imagePathListArray.get(position)))
                         .fit()
@@ -97,10 +98,15 @@ public class ShowPic extends AppCompatActivity {
                         .centerInside()
                         .config(Bitmap.Config.RGB_565)
                         .into(imageView);
-                /*imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));*/
+
+                /*imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));*/ //Picasso与之二选一,很明显,Picasso优于你
                 container.addView(imageView);
                 mImageViews[position] = imageView;
+                onDetachedFromWindow();
                 return imageView;
+            }
+            protected void onDetachedFromWindow() {
+                imageView.setImageDrawable(null);
             }
             @Override
             public void destroyItem(ViewGroup container, int position,

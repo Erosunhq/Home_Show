@@ -72,7 +72,6 @@ public class ShowPic extends AppCompatActivity {
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
             @Override
             public void onPageSelected(int position) {
@@ -85,8 +84,6 @@ public class ShowPic extends AppCompatActivity {
 
             }
         });
-
-
         /***********************************************************************************************/
         //设置图片切换时的动画效果(下面是两种效果,任选一种)
         //mViewPager.setPageTransformer(true,new DepthPageTransformer());
@@ -105,8 +102,7 @@ public class ShowPic extends AppCompatActivity {
                 imageView = new ZoomImageView(getApplicationContext());
 
                 /*
-                * 能不能用Picasso来实现显示大图
-                * */
+                * 能不能用Picasso来实现显示大图? 能      代替 setImageURI         * */
                 Picasso.with(ShowPic.this)
                         .load(new File(imagePathListArray.get(position)))
                         .fit()
@@ -115,9 +111,9 @@ public class ShowPic extends AppCompatActivity {
                         .config(Bitmap.Config.RGB_565)
                         .into(imageView);
                 /*
-                * 下面这容易报OOM的错
-                * */
+                * 下面这容易报OOM的错 * */
                 /*imageView.setImageURI(Uri.parse(imagePathListArray.get(position)));*/
+
                 container.addView(imageView);
                 mImageViews[position] = imageView;
                 onDetachedFromWindow();
